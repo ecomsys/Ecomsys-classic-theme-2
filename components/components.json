@@ -1,0 +1,39 @@
+{
+    "name": "ecomsys",
+    "version": "1.0.0",
+    "components_path": "components/ui",
+    "installed": {
+        "Container": {
+            "installed_at": "2026-05-24 08:02:45",
+            "version": "1.0.0",
+            "category": "ui"
+        },
+        "Fragment": {
+            "installed_at": "2026-05-24 08:02:45",
+            "version": "1.0.0",
+            "category": "ui"
+        },
+        "Button": {
+            "installed_at": "2026-05-24 08:03:36",
+            "version": "1.0.0",
+            "category": "ui"
+        },
+        "Toast": {
+            "installed_at": "2026-05-24 08:03:36",
+            "version": "1.0.0",
+            "category": "ui"
+        },
+        "Tooltip": {
+            "installed_at": "2026-05-24 19:14:16",
+            "version": "1.0.0",
+            "category": "ui"
+        },
+        "Slider": {
+            "installed_at": "2026-05-24 19:50:47",
+            "version": "1.0.0",
+            "category": "ui"
+        }
+    },
+    "prefix": "wp-",
+    "created_at": "2026-05-24 08:02:45"
+}

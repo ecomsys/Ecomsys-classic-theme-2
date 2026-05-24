@@ -1,0 +1,21 @@
+{
+  "name": "cli/ecomsys",
+  "version": "1.0.0",
+  "require": {
+    "gehrisandro/tailwind-merge-php": "^1.2",
+    "symfony/console": "^6.0",
+    "symfony/filesystem": "^6.0",
+    "symfony/finder": "^6.0"
+  },
+  "bin": [
+    "cli_components/bin/wp-components"
+  ],
+  "config": {
+    "optimize-autoloader": true,
+    "vendor-dir": "vendor",
+    "bin-dir": "bin"
+  },
+  "scripts": {
+    "wp/ui": "bin/wp-components"
+  }
+}

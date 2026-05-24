@@ -1,0 +1,71 @@
+/* entry point */
+@import "./variables.css";
+
+@import "tailwindcss";
+@config "../../../tailwind.config.js";
+
+@import "./keyframes.css";
+@import "./fonts.css";
+@import "./app.css";
+
+@import "./typo.css";
+
+/* h0: 52(D) 42(T) 28(M) */
+.text-h0 {
+  @apply text-[1.75rem] sm:text-[2.625rem] md:text-[3.25rem]  leading-[1.6];
+}
+
+/* h1: 42(D) 28(T) 24(M) */
+.text-h1 {
+  @apply text-[1.5rem] sm:text-[1.75rem] md:text-[2.625rem]  leading-[1.6];
+}
+
+/* h2: 32(D) 24(T) 18(M) */
+.text-h2 {
+  @apply text-[1.125rem] sm:text-[1.5rem] md:text-[2rem]  leading-[1.6];
+}
+
+/* h3: 28(D) 20(T) 16(M) */
+.text-h3 {
+  @apply text-[1rem] sm:text-[1.25rem] md:text-[1.75rem]  leading-[1.6];
+}
+
+/* h4: 20(D) 16(T) 14(M) */
+.text-h4 {
+  @apply text-[0.875rem] sm:text-[1rem] md:text-[1.25rem]  leading-[1.6];
+}
+
+/* h5: 16(D) 14(T) 14(M) */
+.text-h5 {
+  @apply text-[0.875rem] sm:text-[0.875rem] md:text-[1rem]  leading-[1.6];
+}
+
+/* h6: все 12 */
+.text-h6 {
+  @apply text-[0.75rem]  leading-[1.6];
+}
+
+/* body-large: 18(D) 18(T) 16(M) */
+.text-body-large {
+  @apply text-[1rem] sm:text-[1.125rem] md:text-[1.125rem] leading-[1.6];
+}
+
+/* body: 16(D) 14(T) 14(M) */
+.text-body {
+  @apply text-[0.875rem] sm:text-[0.875rem] md:text-[1rem]  leading-[1.6];
+}
+
+/* body-small: 14(D) 14(T) 12(M) */
+.text-body-small {
+  @apply text-[0.75rem] sm:text-[0.875rem] md:text-[0.875rem]  leading-[1.6];
+}
+
+/* caption: все 12 */
+.text-caption {
+  @apply text-[0.75rem]  leading-[1.6];
+}
+
+
+.rounded-big{
+  @apply rounded-[1.5rem] md:rounded-[2.25rem];
+}

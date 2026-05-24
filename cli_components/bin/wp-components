@@ -1,0 +1,60 @@
+#!/usr/bin/env php
+<?php
+// cli_components/bin/wp-components
+
+if (PHP_SAPI !== 'cli') {
+    exit(1);
+}
+
+
+// Путь к автолоадеру Composer
+$autoloadPaths = [
+    __DIR__ . '/../../vendor/autoload.php',
+    __DIR__ . '/../vendor/autoload.php',
+];
+
+$autoloader = null;
+foreach ($autoloadPaths as $path) {
+    if (file_exists($path)) {
+        $autoloader = $path;
+        break;
+    }
+}
+
+if (!$autoloader) {
+    fwrite(STDERR, "Ошибка: Запусти 'composer install'\n");
+    exit(1);
+}
+
+require_once $autoloader;
+
+// Автолоадер для классов CLI
+spl_autoload_register(function ($class) {
+    $prefix = 'WPComponents\\';
+    $base_dir = __DIR__ . '/../';
+    
+    $len = strlen($prefix);
+    if (strncmp($prefix, $class, $len) !== 0) {
+        return;
+    }
+    
+    $relative_class = substr($class, $len);
+    $file = $base_dir . str_replace('\\', '/', $relative_class) . '.php';
+    
+    if (file_exists($file)) {
+        require $file;
+    }
+});
+
+use Symfony\Component\Console\Application;
+use WPComponents\CLI\Commands\InitCommand;
+use WPComponents\CLI\Commands\AddCommand;
+
+$app = new Application('WP Components CLI', '1.0.0');
+
+$app->addCommands([
+    new InitCommand(),
+    new AddCommand(),
+]);
+
+$app->run();

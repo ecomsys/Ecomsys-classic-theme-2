@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@config "../../../tailwind.config.js";
+
+
+
+/* Базовая типография для контента страниц и постов */
+@layer components {
+
+  .typo,
+  .typography {
+
+    a {
+      @apply dark:text-gray-300 text-gray-700 hover:opacity-75;
+    }
+
+
+    /* заголовки */
+    h1 {
+      @apply text-2xl sm:text-3xl md:text-4xl font-bold mb-5 leading-[100%];
+    }
+
+    h2 {
+      @apply text-xl sm:text-2xl md:text-3xl font-semibold mb-4 leading-[100%];
+    }
+
+    h3 {
+      @apply text-lg sm:text-xl md:text-2xl font-semibold mb-3 leading-[100%];
+    }
+
+    h4 {
+      @apply text-base sm:text-lg md:text-xl font-medium mb-2 leading-[100%];
+    }
+
+    h5 {
+      @apply text-sm sm:text-base md:text-lg font-medium mb-2 leading-[100%];
+    }
+
+    h6 {
+      @apply text-sm sm:text-base md:text-lg font-medium mb-2 leading-[100%];
+    }
+
+    /* параграфы */
+    p {
+      @apply mb-4 text-sm sm:text-base md:text-base;
+    }
+
+    /* списки */
+    ul,
+    ol {
+      @apply pl-4 sm:pl-6 md:pl-6 mb-4 list-disc;
+    }
+
+    ol {
+      @apply list-decimal;
+    }
+
+    li {
+      @apply mb-2;
+    }
+
+    /* цитаты */
+    blockquote {
+      @apply border-l-4 border-gray-700 dark:border-gray-300 pl-4 sm:pl-6 italic text-gray-700 dark:text-gray-300 mb-4;
+    }
+
+    /* изображения */
+    img {
+      @apply max-w-full h-auto;
+    }
+
+    /* code / inline code */
+    code {
+      @apply bg-gray-100 px-1 rounded text-sm font-mono;
+    }
+
+    pre {
+      @apply bg-gray-100 p-4 rounded overflow-x-auto text-sm font-mono mb-4;
+    }
+  }
+}

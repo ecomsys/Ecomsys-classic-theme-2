@@ -1,0 +1,49 @@
+html {
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  opacity: 0.25;
+  transition: all 1s ease-in-out;
+}
+html.loaded{
+  opacity: 1;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/********************************************
+Скрыть скролл
+*******************************************/
+.scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-hide {
+  -ms-overflow-style: none;
+  /* IE/Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.scroll-hide-children * {
+  -ms-overflow-style: none;
+  /* IE/Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/********************************************
+autocompleate remove bg
+********************************************/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 2rem white inset !important; /* "перекрываем" фон */
+    -webkit-text-fill-color: inherit !important; /* цвет текста */
+    transition: background-color 5000s ease-in-out 0s; /* хак: "вечный" переход */
+    background-clip: content-box !important;
+}
