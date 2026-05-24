@@ -89,12 +89,12 @@ composer install
 
 ## 2. Инициализируй библиотеку
 ```bash
-php wp-components init
+composer wp/ui init
 ```
 
 ## 3. Добавь компонент
 ```bash
-php wp-components add Button
+composer wp/ui add Button Toast Slider
 ```
 
 
